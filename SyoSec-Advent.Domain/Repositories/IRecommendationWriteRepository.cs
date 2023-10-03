@@ -2,7 +2,7 @@
 
 namespace SyoSec_Advent.Domain.Repositories
 {
-    public interface IRecommendationRepository: IBaseWriteRepository<Recommendation>
+    public interface IRecommendationWriteRepository: IBaseWriteRepository<Recommendation>
     {
     }
 }

@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyoSec-Advent.Presentation"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyoSec-Advent.Test", "SyoSec-Advent.Test\SyoSec-Advent.Test.csproj", "{EA342879-E635-4A22-A07F-F87302530222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyoSec_Advent.Api", "SyoSec_Advent.Api\SyoSec_Advent.Api.csproj", "{DC387C49-1C66-4A5A-AB27-C05AEFC1E4DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyoSec_Advent.Api", "SyoSec_Advent.Api\SyoSec_Advent.Api.csproj", "{DC387C49-1C66-4A5A-AB27-C05AEFC1E4DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{3D1506CB-0C3F-4154-B32C-EA56DBEF0DBA}"
 EndProject
