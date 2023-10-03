@@ -1,6 +1,4 @@
 ﻿using SyoSec_Advent.Domain.ValueObject;
-using System.Collections;
-using System.Linq.Expressions;
 
 namespace SyoSec_Advent.Domain.Entities
 {
@@ -8,7 +6,8 @@ namespace SyoSec_Advent.Domain.Entities
     {
         private List<Recommendation> _recommendations = new();
         private Church()
-        { }
+        { 
+        }
         public Church(string nameChurch, Address addressChurch)
         {
             NameChurch = nameChurch;

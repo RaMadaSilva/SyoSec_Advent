@@ -2,10 +2,6 @@
 {
     public abstract class Entity
     {
-        protected Entity()
-        {
-            Id = Guid.NewGuid();
-        }
-        public Guid Id { get; private set; }
+        public long Id { get; private set; }
     }
 }
