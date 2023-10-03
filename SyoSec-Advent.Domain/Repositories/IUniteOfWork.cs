@@ -3,11 +3,11 @@
     public interface IUniteOfWork
     {
         IChurchReadRepository ChurchReadRepository { get; }
-        IChurchRepository ChurchRepository { get; }
+        IChurchWriteRepository ChurchWriteRepository { get; }
         IMemberReadRepository MemberReadRepository { get; }
-        IMemberRepository MemberRepository { get; }
+        IMemberWriteRepository MemberWriteRepository { get; }
         IRecommendationReadRepository RecommendationReadRepository { get; }
-        IRecommendationRepository RecommendationRepository { get; }
+        IRecommendationWriteRepository RecommendationWriteRepository { get; }
 
         Task CommitAsync(CancellationToken cancellationToken = default); 
     }

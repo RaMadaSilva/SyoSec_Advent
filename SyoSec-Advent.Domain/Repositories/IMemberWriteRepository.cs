@@ -2,7 +2,7 @@
 
 namespace SyoSec_Advent.Domain.Repositories
 {
-    public  interface IMemberRepository : IBaseRepository<Member>
+    public  interface IMemberRepository : IBaseWriteRepository<Member>
     {
     }
 }

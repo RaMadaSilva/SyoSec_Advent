@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SyoSec_Advent.Domain.Repositories
 {
-    public interface IChurchRepository: IBaseRepository<Church>
+    public interface IChurchRepository: IBaseWriteRepository<Church>
     {
     }
 }
