@@ -4,7 +4,7 @@ namespace SyoSec_Advent.Domain.Entities
 {
     public sealed class Recommendation : Entity
     {
-        private const int PERIODVALIDITY = 120;
+        private const double PERIODVALIDITY = 120;
         private Recommendation()
         {
 
@@ -56,9 +56,15 @@ namespace SyoSec_Advent.Domain.Entities
             return true;
         }
 
-        public void UpdateStateRecommendationToTransferencia()
+        public bool UpdateStateRecommendationToTransferencia()
         {
-            //TODO
+            //Verificar o estado da propriedade se está como falsa
+            if(DesireTrasfer)
+                return false;
+            //Caso seja falsa actualizamos e alteramos o estado
+            DesireTrasfer = true; 
+            RecommendationState = ERecommendationState.Transferencia;
+            return true;
         }
 
     }
