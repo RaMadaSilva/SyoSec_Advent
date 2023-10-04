@@ -23,5 +23,14 @@ namespace SyoSec_Advent.Domain.Entities
 
         public void AddRole(Role role) => _roles.Add(role); 
 
+        public void UpdateUser(Name fullName, string userName, string password)
+        {
+            FullName = fullName; 
+            UserName = userName;
+            PasswordHash = password;
+        }
+        //Alterar Passaword
+        //Recuperar a Password
+
     }
 }
