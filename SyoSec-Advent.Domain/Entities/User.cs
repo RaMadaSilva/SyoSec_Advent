@@ -30,7 +30,7 @@ namespace SyoSec_Advent.Domain.Entities
             PasswordHash = password;
         }
         //Alterar Passaword
-        //Recuperar a Password
-
+        public void UpdatePassword(string password)
+            => PasswordHash = password;
     }
 }
