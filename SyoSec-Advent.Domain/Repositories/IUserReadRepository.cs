@@ -1,13 +1,11 @@
 ﻿using SyoSec_Advent.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SyoSec_Advent.Domain.Repositories
 {
     public interface IUserReadRepository : IBaseReadRepository<User>
     {
+        Task<IEnumerable<User>> GetAllUserWithRoleAsync();
+        Task<User> GetAUserByIdWithRoleAsync(long id);
+        Task<bool> AssociateUserAndRoles(long userId, IEnumerable<Role> roles);
     }
 }
