@@ -19,7 +19,8 @@ namespace SyoSec_Advent.Domain.Entities
 
         public IReadOnlyCollection<Recommendation> Recommendations { get => _recommendations; }
 
-        public void AddRecommendation(Recommendation recommendation) =>_recommendations.Add(recommendation);
+        public void AddRecommendation(Recommendation recommendation) 
+            =>_recommendations.Add(recommendation);
 
         public bool Equals(Member? other)
         {

@@ -2,7 +2,7 @@
 {
     public enum ERecommendationType
     {
-        Recebida = 1, 
+        Recebida = 1,
         Solicitada = 2
     }
 }
