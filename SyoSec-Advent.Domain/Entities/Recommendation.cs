@@ -35,9 +35,9 @@ namespace SyoSec_Advent.Domain.Entities
 
         public bool UpdateStateRecommendationToInvalide()
         {
-            var validateDate = DateTime.UtcNow.Subtract(DateRegister).TotalDays;
+            var DayPast = DateTime.UtcNow.Subtract(DateRegister).TotalDays;
 
-            if (validateDate >= PERIODVALIDITY
+            if (DayPast >= PERIODVALIDITY
                 && RecommendationState == ERecommendationState.Valido)
             {
                 RecommendationState = ERecommendationState.Invalido;
