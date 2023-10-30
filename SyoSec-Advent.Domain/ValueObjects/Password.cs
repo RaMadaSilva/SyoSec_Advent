@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using SyosecAdvent.Domain.ExceptionsCustomized;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace SyosecAdvent.Domain.ValueObjects
@@ -8,10 +9,10 @@ namespace SyosecAdvent.Domain.ValueObjects
         public Password(string text)
         {
             if (string.IsNullOrEmpty(text))
-                throw new Exception();
+                throw new PasswordException("Password Não pode ser vazia");
 
             if (text.Length < 5)
-                throw new Exception();
+                throw new PasswordException("Password muito Fraca");
 
             Text = EncryptPass(text);
         }

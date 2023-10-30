@@ -21,4 +21,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EntitiTests\" />
+    <Folder Include="ValueObjectsTests\" />
+  </ItemGroup>
+
 </Project>
