@@ -1,6 +1,6 @@
 ﻿namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public interface IUniteOfWork
+    public interface IUnitOfWork
     {
         IChurchReadRepository ChurchReadRepository { get; }
         IChurchWriteRepository ChurchWriteRepository { get; }
