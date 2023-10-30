@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2A628FA4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyosecAdvent.Domain", "SyoSec-Advent.Domain\SyosecAdvent.Domain.csproj", "{274BD7D0-99B3-4F3A-8E10-F53F85569D0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyosecAdvent.Aplication", "SyoSec-Advent.Aplication\SyosecAdvent.Aplication.csproj", "{13C40CA6-1B8A-4A96-9F6F-A1A3699C0721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyosecAdvent.Application", "SyoSec-Advent.Aplication\SyosecAdvent.Application.csproj", "{13C40CA6-1B8A-4A96-9F6F-A1A3699C0721}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyosecAdvent.Infrastructure", "SyoSec-Advent.Infrastructure\SyosecAdvent.Infrastructure.csproj", "{91E1A4C7-19D4-481B-B78E-53701EDA6E32}"
 EndProject
