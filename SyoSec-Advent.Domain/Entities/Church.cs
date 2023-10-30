@@ -1,32 +1,30 @@
-﻿using SyoSec_Advent.Domain.ValueObjects;
+﻿using SyosecAdvent.Domain.ValueObjects;
 
-namespace SyoSec_Advent.Domain.Entities
+namespace SyosecAdvent.Domain.Entities; 
+public sealed class Church : Entity, IEquatable<Church>
 {
-    public sealed class Church : Entity, IEquatable<Church>
+    private List<Recommendation> _recommendations = new();
+    private Church()
+    { 
+    }
+    public Church(string nameChurch, Address addressChurch)
     {
-        private List<Recommendation> _recommendations = new();
-        private Church()
-        { 
-        }
-        public Church(string nameChurch, Address addressChurch)
-        {
-            NameChurch = nameChurch;
-            AddressChurch = addressChurch;
-        }
+        NameChurch = nameChurch;
+        AddressChurch = addressChurch;
+    }
 
-        public string NameChurch { get; private set; }
-        public Address AddressChurch { get; private set; }
-        public IReadOnlyCollection<Recommendation> Recommendations { get =>_recommendations;}
+    public string NameChurch { get; private set; }
+    public Address AddressChurch { get; private set; }
+    public IReadOnlyCollection<Recommendation> Recommendations { get =>_recommendations;}
 
-        public void AddRecommendation(Recommendation recommendation) =>
-            _recommendations.Add(recommendation);
-        
-        public bool Equals(Church? other)
-        {
-            if(other is null)
-                return false;
-            return NameChurch ==other.NameChurch && 
-                   AddressChurch == other.AddressChurch;
-        }
+    public void AddRecommendation(Recommendation recommendation) =>
+        _recommendations.Add(recommendation);
+    
+    public bool Equals(Church? other)
+    {
+        if(other is null)
+            return false;
+        return NameChurch ==other.NameChurch && 
+               AddressChurch == other.AddressChurch;
     }
 }

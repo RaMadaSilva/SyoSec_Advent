@@ -1,6 +1,4 @@
-﻿using SyosecAdvent.Domain.ValueObjects;
-
-namespace SyoSec_Advent.Domain.ValueObjects;
+﻿namespace SyosecAdvent.Domain.ValueObjects;
 
 public sealed class Address : ValueObject
 {

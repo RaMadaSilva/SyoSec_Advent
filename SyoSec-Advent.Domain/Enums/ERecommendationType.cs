@@ -1,4 +1,4 @@
-﻿namespace SyoSec_Advent.Domain.Enums
+﻿namespace SyosecAdvent.Domain.Enums
 {
     public enum ERecommendationType
     {

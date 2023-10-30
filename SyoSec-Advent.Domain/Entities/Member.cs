@@ -1,6 +1,6 @@
-﻿using SyoSec_Advent.Domain.ValueObjects;
+﻿using SyosecAdvent.Domain.ValueObjects;
 
-namespace SyoSec_Advent.Domain.Entities
+namespace SyosecAdvent.Domain.Entities
 {
     public sealed class  Member : Entity, IEquatable<Member>
     {

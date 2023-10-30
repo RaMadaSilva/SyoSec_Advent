@@ -1,5 +1,5 @@
-﻿using SyoSec_Advent.Domain.Entities;
-using SyoSec_Advent.Domain.ValueObject;
+﻿using SyosecAdvent.Domain.Entities;
+using SyosecAdvent.Domain.ValueObjects;
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {

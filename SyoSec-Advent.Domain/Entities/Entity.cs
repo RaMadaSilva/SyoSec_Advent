@@ -1,4 +1,4 @@
-﻿namespace SyoSec_Advent.Domain.Entities
+﻿namespace SyosecAdvent.Domain.Entities
 {
     public abstract class Entity
     {

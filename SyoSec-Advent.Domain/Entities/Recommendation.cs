@@ -1,6 +1,6 @@
-﻿using SyoSec_Advent.Domain.Enums;
+﻿using SyosecAdvent.Domain.Enums;
 
-namespace SyoSec_Advent.Domain.Entities
+namespace SyosecAdvent.Domain.Entities
 {
     public sealed class Recommendation : Entity
     {

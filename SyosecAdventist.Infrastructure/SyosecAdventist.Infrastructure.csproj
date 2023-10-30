@@ -2,13 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>SyosecAdvent.Application</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\SyosecAdvent.Domain\SyosecAdvent.Domain.csproj" />
-  </ItemGroup>
 
 </Project>

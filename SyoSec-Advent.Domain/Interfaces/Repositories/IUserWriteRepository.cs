@@ -1,4 +1,4 @@
-﻿using SyoSec_Advent.Domain.Entities;
+﻿using SyosecAdvent.Domain.Entities;
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
