@@ -1,4 +1,4 @@
-﻿namespace SyoSec_Advent.Domain.Repositories
+﻿namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
     public interface IUniteOfWork
     {
@@ -13,6 +13,6 @@
         IRoleReadRepository RoleReadRepository { get; }
         IRoleWriteRepository RoleWriteRepository { get; }
 
-        Task CommitAsync(CancellationToken cancellationToken = default); 
+        Task CommitAsync(CancellationToken cancellationToken = default);
     }
 }

@@ -1,4 +1,5 @@
-﻿using SyoSec_Advent.Domain.ValueObject;
+﻿using SyoSec_Advent.Domain.ValueObjects;
+using SyosecAdvent.Domain.ValueObjects;
 
 namespace SyoSec_Advent.Domain.Entities
 {
@@ -18,7 +19,7 @@ namespace SyoSec_Advent.Domain.Entities
 
         public Name FullName { get; private set; }
         public string UserName { get; private set; }
-        public string PasswordHash { get; private set; }
+        public Password PasswordHash { get; private set; }
         public IReadOnlyCollection<Role> Roles { get => _roles;}
 
         public void AddRole(Role role) => _roles.Add(role); 

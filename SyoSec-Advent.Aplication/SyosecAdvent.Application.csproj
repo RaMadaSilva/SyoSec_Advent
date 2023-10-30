@@ -1,14 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>SyoSec_Advent.Infrastructure</RootNamespace>
+    <RootNamespace>SyosecAdvent.Application</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SyoSec-Advent.Aplication\SyoSec-Advent.Aplication.csproj" />
+    <ProjectReference Include="..\SyoSec-Advent.Domain\SyosecAdvent.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SyoSec-Advent.Domain\SyoSec-Advent.Domain.csproj" />
+    
   </ItemGroup>
 
 </Project>

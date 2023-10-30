@@ -1,4 +1,4 @@
-﻿using SyoSec_Advent.Domain.ValueObject;
+﻿using SyoSec_Advent.Domain.ValueObjects;
 
 namespace SyoSec_Advent.Domain.Entities
 {
@@ -23,6 +23,8 @@ namespace SyoSec_Advent.Domain.Entities
         
         public bool Equals(Church? other)
         {
+            if(other is null)
+                return false;
             return NameChurch ==other.NameChurch && 
                    AddressChurch == other.AddressChurch;
         }

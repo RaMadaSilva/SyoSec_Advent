@@ -4,11 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>SyoSec_Advent.Presentation</RootNamespace>
+    <RootNamespace>SyosecAdvent.Presentation</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\SyoSec-Advent.Infrastructure\SyoSec-Advent.Infrastructure.csproj" />
-  </ItemGroup>
 
 </Project>

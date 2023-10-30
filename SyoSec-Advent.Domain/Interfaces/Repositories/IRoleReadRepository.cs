@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SyoSec_Advent.Domain.Repositories
+namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public  interface IRoleReadRepository : IBaseReadRepository<Role>
+    public interface IRoleReadRepository : IBaseReadRepository<Role>
     {
     }
 }

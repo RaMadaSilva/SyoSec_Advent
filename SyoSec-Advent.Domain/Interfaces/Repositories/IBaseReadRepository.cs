@@ -1,10 +1,10 @@
 ﻿using SyoSec_Advent.Domain.Entities;
 
-namespace SyoSec_Advent.Domain.Repositories
+namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
     public interface IBaseReadRepository<TEntity> where TEntity : Entity
     {
-        Task<IEnumerable<TEntity>> GetAllAsync ();
+        Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(long id);
     }
 }

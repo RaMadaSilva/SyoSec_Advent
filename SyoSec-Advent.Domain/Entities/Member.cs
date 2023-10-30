@@ -1,4 +1,4 @@
-﻿using SyoSec_Advent.Domain.ValueObject;
+﻿using SyoSec_Advent.Domain.ValueObjects;
 
 namespace SyoSec_Advent.Domain.Entities
 {
@@ -24,6 +24,8 @@ namespace SyoSec_Advent.Domain.Entities
 
         public bool Equals(Member? other)
         {
+            if (other is null) 
+                return false;
             return NameMember == other.NameMember &&
                    Phone == other.Phone &&
                    AddressMember == other.AddressMember; 
