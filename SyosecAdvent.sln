@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyosecAdventist.Test", "SyosecAdventist.Test\SyosecAdventist.Test.csproj", "{BE08AC37-A42A-45E0-9D74-2B1C6DCF451E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyosecAdventist.Infrastructure", "SyosecAdventist.Infrastructure\SyosecAdventist.Infrastructure.csproj", "{0FC5C1FF-41A5-46DE-8CDB-73FB1FB474AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyosecAdvent.Infrastructure", "SyosecAdventist.Infrastructure\SyosecAdvent.Infrastructure.csproj", "{0FC5C1FF-41A5-46DE-8CDB-73FB1FB474AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyosecAdvent.Application", "SyosecAdvent.Application\SyosecAdvent.Application.csproj", "{FA4F7D99-A9D8-4FD3-B835-626277F4A864}"
 EndProject
