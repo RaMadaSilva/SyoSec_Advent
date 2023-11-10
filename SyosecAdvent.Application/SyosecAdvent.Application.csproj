@@ -8,8 +8,20 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Recommendations\" />
-    <Folder Include="Users\" />
+    <Folder Include="Recommendations\Delete\" />
+    <Folder Include="Recommendations\Update\" />
+    <Folder Include="Users\Create\" />
+    <Folder Include="Users\Delete\" />
+    <Folder Include="Users\Update\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="2.0.5" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SyoSec-Advent.Domain\SyosecAdvent.Domain.csproj" />
   </ItemGroup>
 
 </Project>
