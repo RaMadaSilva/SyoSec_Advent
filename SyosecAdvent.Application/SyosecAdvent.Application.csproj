@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="Recommendations\Delete\" />
     <Folder Include="Recommendations\Update\" />
     <Folder Include="Users\Create\" />
