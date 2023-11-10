@@ -2,7 +2,7 @@
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public interface IMemberWriteRepository : IBaseWriteRepository<Member>
+    public interface IRecommendationReadRepositoryAsync : IBaseReadRepositoryAsync<Recommendation>
     {
     }
 }

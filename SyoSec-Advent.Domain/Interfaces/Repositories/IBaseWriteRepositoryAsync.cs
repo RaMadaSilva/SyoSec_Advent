@@ -2,7 +2,7 @@
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public interface IBaseWriteRepository<TEntity> where TEntity : Entity
+    public interface IBaseWriteRepositoryAsync<TEntity> where TEntity : Entity
     {
         Task AddAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);

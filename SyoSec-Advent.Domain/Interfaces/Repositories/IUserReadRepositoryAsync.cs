@@ -2,7 +2,7 @@
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public interface IUserReadRepository : IBaseReadRepository<User>
+    public interface IUserReadRepositoryAsync : IBaseReadRepositoryAsync<User>
     {
         Task<IEnumerable<User>> GetAllUserWithRoleAsync();
         Task<User> GetAUserByIdWithRoleAsync(long id);

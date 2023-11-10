@@ -34,9 +34,8 @@ namespace SyosecAdvent.Application.Recommendations.Create
         public CreateRecommendationData? Data { get; set; }
     }
 
-    public record CreateRecommendationData(int Id, 
-        string FirstName, 
-        string LastName, 
+    public record CreateRecommendationData(long Id, 
+        string Name, 
         string Church, 
         string RecommendationType);
 }

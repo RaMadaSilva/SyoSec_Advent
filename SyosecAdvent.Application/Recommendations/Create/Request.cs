@@ -22,8 +22,10 @@ namespace SyosecAdvent.Application.Recommendations.Create
         public string ChurchProvince { get; set; } = string.Empty;
         #endregion
 
+        #region 3 Recommendation
         public string Observation { get; set; } = string.Empty;
         public ERecommendationType RecommendationType { get; set; }
+        #endregion
     }
 
 }

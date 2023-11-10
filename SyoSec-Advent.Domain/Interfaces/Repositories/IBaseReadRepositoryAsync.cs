@@ -2,7 +2,7 @@
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public interface IBaseReadRepository<TEntity> where TEntity : Entity
+    public interface IBaseReadRepositoryAsync<TEntity> where TEntity : Entity
     {
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(long id);

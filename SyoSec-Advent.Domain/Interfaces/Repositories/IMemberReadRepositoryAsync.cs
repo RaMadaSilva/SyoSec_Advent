@@ -3,8 +3,8 @@ using SyosecAdvent.Domain.ValueObjects;
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public interface IMemberReadRepository : IBaseReadRepository<Member>
+    public interface IMemberReadRepositoryAsync : IBaseReadRepositoryAsync<Member>
     {
-        Task<Member> GetMemberByName(Name name);
+        Task<Member> GetMemberByNameAsync(Name name);
     }
 }

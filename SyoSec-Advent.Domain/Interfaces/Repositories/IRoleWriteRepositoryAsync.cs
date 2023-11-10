@@ -2,7 +2,8 @@
 
 namespace SyosecAdvent.Domain.Interfaces.Repositories
 {
-    public interface IRoleReadRepository : IBaseReadRepository<Role>
+    public interface IRoleWriteRepositoryAsync : IBaseWriteRepositoryAsync<Role>
     {
+
     }
 }
