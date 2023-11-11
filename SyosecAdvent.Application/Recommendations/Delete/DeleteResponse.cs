@@ -14,12 +14,6 @@ namespace SyosecAdvent.Application.Recommendations.Delete
             Message = message;
             StatusCode = statusCode;
         }
-        public DeleteResponse(string message, int statusCode, IEnumerable<Notification>? notifications = null )
-        {
-            Message=message; 
-            StatusCode = statusCode;
-            Notifications = notifications;
-        }
         public DeleteResponse(string message, DataRecommendationResponse data)
         {
             Data = data;
