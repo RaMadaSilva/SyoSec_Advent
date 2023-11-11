@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace SyosecAdvent.Application.Recommendations.GetById
 {
-    internal class Request
+    public sealed class Request : IRequest<GetByIdResponse>
     {
+        public long Id { get; set; }
     }
 }
