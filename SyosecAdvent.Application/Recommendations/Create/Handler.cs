@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using SyosecAdvent.Application.Common;
 using SyosecAdvent.Domain.Entities;
 using SyosecAdvent.Domain.Interfaces.Repositories;
 using SyosecAdvent.Domain.ValueObjects;
@@ -91,12 +92,12 @@ namespace SyosecAdvent.Application.Recommendations.Create
 
                 await _uow.CommitAsync(cancellationToken);
 
-                var data = new CreateRecommendationData(recommendation.Id,
+                var data = new DataRecommendationResponse(recommendation.Id,
                         recommendation.Member.NameMember.ToString(),
                         recommendation.Church.NameChurch,
                         Enum.GetName(recommendation.RecommendationType));
 
-                return new CreateResponse(data, "Recomendação criada com sucesso");
+                return new CreateResponse("Recomendação criada com sucesso", data);
             }
             catch (Exception ex)
             {

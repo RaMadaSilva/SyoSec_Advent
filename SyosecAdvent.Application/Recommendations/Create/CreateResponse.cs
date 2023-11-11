@@ -24,18 +24,14 @@ namespace SyosecAdvent.Application.Recommendations.Create
             Notifications = notifications;
         }
 
-        public CreateResponse(CreateRecommendationData data, string message)
+        public CreateResponse(string message, DataRecommendationResponse data)
         {
             Data = data;
             Message = message;
             StatusCode = 201; 
         }
 
-        public CreateRecommendationData? Data { get; set; }
+        public DataRecommendationResponse? Data { get; set; }
     }
 
-    public record CreateRecommendationData(long Id, 
-        string Name, 
-        string Church, 
-        string RecommendationType);
 }
