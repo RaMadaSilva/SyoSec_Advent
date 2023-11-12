@@ -3,9 +3,9 @@ using Flunt.Validations;
 
 namespace SyosecAdvent.Application.Recommendations.Create
 {
-    public  static class ValidationRequest
+    public  static class ValidationCreateRequest
     {
-        public static Contract<Notification> Ensure(Request request)
+        public static Contract<Notification> Ensure(CreateRequest request)
             => new Contract<Notification>()
                    .Requires()
                    .IsGreaterThan(request.FirstName.Length, 2, "FistName", "O Nome deve ter mais que 2 caracteres")

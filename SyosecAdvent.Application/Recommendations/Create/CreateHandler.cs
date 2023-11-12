@@ -6,13 +6,13 @@ using SyosecAdvent.Domain.ValueObjects;
 
 namespace SyosecAdvent.Application.Recommendations.Create
 {
-    public class Handler : IRequestHandler<Request, CreateResponse>
+    public class CreateHandler : IRequestHandler<CreateRequest, CreateResponse>
     {
         private readonly IUnitOfWorkAsync _uow;
 
-        public Handler(IUnitOfWorkAsync uow) =>_uow = uow;
+        public CreateHandler(IUnitOfWorkAsync uow) =>_uow = uow;
 
-        public async Task<CreateResponse> Handle(Request request, CancellationToken cancellationToken)
+        public async Task<CreateResponse> Handle(CreateRequest request, CancellationToken cancellationToken)
         {
             Name name;
             Member member;
@@ -23,7 +23,7 @@ namespace SyosecAdvent.Application.Recommendations.Create
 
             try
             {
-                var val = ValidationRequest.Ensure(request);
+                var val = ValidationCreateRequest.Ensure(request);
                 if (!val.IsValid)
                     return new CreateResponse("Não foi possivel criar a recommendacao", 400, val.Notifications);
             }

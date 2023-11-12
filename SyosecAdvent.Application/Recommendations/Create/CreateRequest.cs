@@ -3,7 +3,7 @@ using SyosecAdvent.Domain.Enums;
 
 namespace SyosecAdvent.Application.Recommendations.Create
 {
-    public class Request: IRequest<CreateResponse>
+    public class CreateRequest: IRequest<CreateResponse>
     {
         #region 1 Member
         public string FirstName { get; set; } = string.Empty;
