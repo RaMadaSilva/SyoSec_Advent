@@ -4,16 +4,16 @@ using SyosecAdvent.Domain.Interfaces.Repositories;
 
 namespace SyosecAdvent.Application.Recommendations.Delete
 {
-    public class Handler : IRequestHandler<Request, DeleteResponse>
+    public class DeleteHandler : IRequestHandler<DeleteRequest, DeleteResponse>
     {
         private readonly IUnitOfWorkAsync _Uow;
 
-        public Handler(IUnitOfWorkAsync uow)
+        public DeleteHandler(IUnitOfWorkAsync uow)
         {
             _Uow = uow;
         }
 
-        public async Task<DeleteResponse> Handle(Request request, CancellationToken cancellationToken)
+        public async Task<DeleteResponse> Handle(DeleteRequest request, CancellationToken cancellationToken)
         {
             try
             {

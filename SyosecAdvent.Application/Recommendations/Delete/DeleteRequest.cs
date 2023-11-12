@@ -2,7 +2,7 @@
 
 namespace SyosecAdvent.Application.Recommendations.Delete
 {
-    public class Request : IRequest<DeleteResponse>
+    public class DeleteRequest : IRequest<DeleteResponse>
     {
         public long Id { get; set; }
     }
