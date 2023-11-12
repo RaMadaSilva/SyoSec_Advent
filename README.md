@@ -17,7 +17,7 @@ Este sistema visa Organizar todas recomendações Recebidas e Enviadas,  actas e
 ### Registar a Recomendação
 
 O registo da Recommendação deve ser realizado por um utilizador com perfil de Secretario ou vice Secretario
-   - Detalhes a serem registrados: 
+   - Dados da Recomendação: 
      - Nome do membro
      - Telefone
      - Morada do Membro
@@ -25,34 +25,33 @@ O registo da Recommendação deve ser realizado por um utilizador com perfil de 
      - Morada da igreja
      - Tipo de Recomendação (solicitado ou Recebido) 
      - Observação (opcional)
+     - Url da Recommendação anexa(opcional)
 
-### Devolução da Recomendação (TODO!)
+### Devolução da Recomendação
 
-  - Registrar solicitação e devolução.
    - Para devolução, registrar:
-     - Data do regresso
-     - Anexar a carta devolvida
-   - O membro pode manifestar o desejo de transferência.
-   - Gerar PDF da carta de recomendação no momento da solicitação.
+     - Data
+     - Anexar a carta devolvida(opcional)
+     
+### Desejo de Transferencia
 
-   - Recepção do membro e registado o regresso à procedência.
-   - Para regresso, informar a data de regresso.
-   - Para solicitação de transferência, informar:
-     - Número e data da ata
-     - Número do voto
-   - Membros não podem ter informações duplicadas (nome, morada, telefone).
-   - Acompanhantes podem ser adicionados à observação.
+- Quando um membro com recomendação(solicitada ou recebida) manifestar o desejo de Transferencia 
+     - Desejo de Transferencia
+     - Data
+       
+### Restrições e Funcionalidades Adicionais
 
-Restrições e Funcionalidades Adicionais
-
-- Não aceitar cartas de recomendação com data superior a 6 meses.
-- Exibir o número de dias restantes até que as cartas expirem.
+- Não aceitar cartas de recomendação com data de criação de 6 meses atrás.
+- Exibir o número de dias restantes para a carta expirar.
 - Estados das cartas de recomendação: Valida, Inválida, Devolvida, Transferência.
 - Anexar cartas correspondentes às recomendações recebidas.
-- As cartas de recomendação devem ser únicas por membro.
 - Um membro pode solicitar várias recomendações.
-- Um membro pode ter apenas uma recomendação em andamento.
+- Um membro pode ter apenas uma recomendação Valida no maximo.
 - Manter histórico de ações realizadas em relação a cada carta de recomendação.
+- O membro pode manifestar o desejo de transferência.
+- Gerar PDF da carta de recomendação no momento da solicitação.
+- Evitar Membros duplicados com os mesmo: nome, morada e telefone.
+- Acompanhantes podem ser adicionados à observação.
 
 ### Módulo 2: Actas
 
@@ -97,14 +96,15 @@ Restrições e Funcionalidades Adicionais
 - Teste de Unidade (xUnit)
 - Git e GitHub.
 
-## Diagrama de Classes
+## Diagrama de Classes e de caso de uso
 
 ### Modulo 1: Recommendações
 -
 ### Modulo 2: Actas
 -
 ### Modulo 3: Disciplinas
-  Diagrama de caso de uso
+
+ * 
 
 ## Idioma para Desenvolvimento
 
