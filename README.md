@@ -1,17 +1,17 @@
-# SyosecAdvent
+# ✒️  SyosecAdvent
 
-## Introdução
+## 🔛 Introdução
 28/08/2023
 O SyoSec é um sistema de Organização da secretaria das Igrejas Adventistas do sétimo Dia, em particular para  a Mabor;
 Este sistema visa Organizar todas recomendações Recebidas e Enviadas,  actas elaboradas ao longo do ano Eclesiástico, e controle dos prazos das disciplinas por sencura.
 
-## Modulos
+## ♻️ Modulos
 
 1. Recomendações
 2.  Actas
 3.  Disciplinas
 
-## Funcionalidades
+## 💫 Funcionalidades
 ### Módulo 1: Recomendações
 
 ### Registar a Recomendação
@@ -81,7 +81,7 @@ O registo da Recommendação deve ser realizado por um utilizador com perfil de 
 - O sistema deve apresentar sempre de forma dinâmica o numero de dias que faltam para que a Disciplina Termine.
 - Quando o numero de dias for Atinge em zero, começa a contar o numero de dias passado deste o termino da disciplina. e apresenta com uma coloração diferente.
 
-## Tecnologias
+##  🚀 Tecnologias
 
 - C#
 - Asp.Net core 7.0
@@ -96,7 +96,7 @@ O registo da Recommendação deve ser realizado por um utilizador com perfil de 
 - Teste de Unidade (xUnit)
 - Git e GitHub.
 
-## Diagrama de Classes e de caso de uso
+## 📈 Diagrama de Classes e de caso de uso
 
 ### Modulo 1: Recommendações
 -
@@ -106,6 +106,6 @@ O registo da Recommendação deve ser realizado por um utilizador com perfil de 
 
  * 
 
-## Idioma para Desenvolvimento
+## 🌍 Idioma para Desenvolvimento
 
 * Inglês
