@@ -6,16 +6,16 @@ using SyosecAdvent.Domain.Interfaces.Repositories;
 
 namespace SyosecAdvent.Application.Recommendations.GetAll
 {
-    public class Handler : IRequestHandler<Request, GetAllResponse>
+    public class GetAllHandler : IRequestHandler<GetAllRequest, GetAllResponse>
     {
         private readonly IUnitOfWorkAsync _Uow;
 
-        public Handler(IUnitOfWorkAsync uow)
+        public GetAllHandler(IUnitOfWorkAsync uow)
         {
             _Uow = uow;
         }
 
-        public async Task<GetAllResponse> Handle(Request request, CancellationToken cancellationToken)
+        public async Task<GetAllResponse> Handle(GetAllRequest request, CancellationToken cancellationToken)
         {
             try
             {
