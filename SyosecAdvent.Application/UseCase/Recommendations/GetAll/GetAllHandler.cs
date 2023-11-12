@@ -4,7 +4,7 @@ using SyosecAdvent.Application.Common.DTO;
 using SyosecAdvent.Application.Extensions;
 using SyosecAdvent.Domain.Interfaces.Repositories;
 
-namespace SyosecAdvent.Application.Recommendations.GetAll
+namespace SyosecAdvent.Application.UseCase.Recommendations.GetAll
 {
     public class GetAllHandler : IRequestHandler<GetAllRequest, GetAllResponse>
     {

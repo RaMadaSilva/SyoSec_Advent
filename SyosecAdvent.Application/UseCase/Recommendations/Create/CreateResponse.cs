@@ -1,22 +1,22 @@
 ﻿using Flunt.Notifications;
 using SyosecAdvent.Application.Common;
 
-namespace SyosecAdvent.Application.Recommendations.Create
+namespace SyosecAdvent.Application.UseCase.Recommendations.Create
 {
     public class CreateResponse : Response
     {
-        public CreateResponse() 
+        public CreateResponse()
         {
         }
 
         public CreateResponse(string message, int statusCode)
         {
             Message = message;
-            StatusCode = statusCode;    
+            StatusCode = statusCode;
         }
 
-        public CreateResponse(string message, 
-            int statusCode, 
+        public CreateResponse(string message,
+            int statusCode,
             IEnumerable<Notification>? notifications = null)
         {
             Message = message;
@@ -28,7 +28,7 @@ namespace SyosecAdvent.Application.Recommendations.Create
         {
             Data = data;
             Message = message;
-            StatusCode = 201; 
+            StatusCode = 201;
         }
 
         public DataRecommendationResponse? Data { get; set; }

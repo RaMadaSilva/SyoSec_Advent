@@ -1,7 +1,7 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
 
-namespace SyosecAdvent.Application.Recommendations.Create
+namespace SyosecAdvent.Application.UseCase.Recommendations.Create
 {
     public  static class ValidationCreateRequest
     {

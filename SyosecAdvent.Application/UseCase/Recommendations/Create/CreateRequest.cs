@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using SyosecAdvent.Domain.Enums;
 
-namespace SyosecAdvent.Application.Recommendations.Create
+namespace SyosecAdvent.Application.UseCase.Recommendations.Create
 {
     public class CreateRequest: IRequest<CreateResponse>
     {

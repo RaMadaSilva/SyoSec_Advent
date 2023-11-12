@@ -2,7 +2,7 @@
 using SyosecAdvent.Application.Common;
 using SyosecAdvent.Domain.Interfaces.Repositories;
 
-namespace SyosecAdvent.Application.Recommendations.Delete
+namespace SyosecAdvent.Application.UseCase.Recommendations.Delete
 {
     public class DeleteHandler : IRequestHandler<DeleteRequest, DeleteResponse>
     {

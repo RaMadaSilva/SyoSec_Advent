@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace SyosecAdvent.Application.Recommendations.GetAll
+namespace SyosecAdvent.Application.UseCase.Recommendations.GetAll
 {
     public class GetAllRequest : IRequest<GetAllResponse>
     {

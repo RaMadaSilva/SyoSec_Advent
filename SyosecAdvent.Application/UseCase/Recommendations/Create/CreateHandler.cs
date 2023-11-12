@@ -4,7 +4,7 @@ using SyosecAdvent.Domain.Entities;
 using SyosecAdvent.Domain.Interfaces.Repositories;
 using SyosecAdvent.Domain.ValueObjects;
 
-namespace SyosecAdvent.Application.Recommendations.Create
+namespace SyosecAdvent.Application.UseCase.Recommendations.Create
 {
     public class CreateHandler : IRequestHandler<CreateRequest, CreateResponse>
     {

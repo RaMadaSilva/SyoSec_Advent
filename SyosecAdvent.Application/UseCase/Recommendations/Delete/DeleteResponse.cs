@@ -1,13 +1,12 @@
-﻿using Flunt.Notifications;
-using SyosecAdvent.Application.Common;
+﻿using SyosecAdvent.Application.Common;
 
-namespace SyosecAdvent.Application.Recommendations.Delete
+namespace SyosecAdvent.Application.UseCase.Recommendations.Delete
 {
     public class DeleteResponse : Response
     {
         public DeleteResponse()
         {
-            
+
         }
         public DeleteResponse(string message, int statusCode)
         {
@@ -18,7 +17,7 @@ namespace SyosecAdvent.Application.Recommendations.Delete
         {
             Data = data;
             Message = message;
-            StatusCode = 200; 
+            StatusCode = 200;
         }
         public DataRecommendationResponse? Data { get; set; }
     }

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace SyosecAdvent.Application.Recommendations.Delete
+namespace SyosecAdvent.Application.UseCase.Recommendations.Delete
 {
     public class DeleteRequest : IRequest<DeleteResponse>
     {

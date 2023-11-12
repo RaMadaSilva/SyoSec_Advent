@@ -3,7 +3,7 @@ using MediatR;
 using SyosecAdvent.Application.Common.DTO;
 using SyosecAdvent.Domain.Interfaces.Repositories;
 
-namespace SyosecAdvent.Application.Recommendations.GetById
+namespace SyosecAdvent.Application.UseCase.Recommendations.GetById
 {
     public class GetbyIdHandler : IRequestHandler<GetByIdRequest, GetByIdResponse>
     {

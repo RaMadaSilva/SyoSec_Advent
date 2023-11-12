@@ -1,7 +1,7 @@
 ﻿using SyosecAdvent.Application.Common;
 using SyosecAdvent.Application.Common.DTO;
 
-namespace SyosecAdvent.Application.Recommendations.GetById
+namespace SyosecAdvent.Application.UseCase.Recommendations.GetById
 {
     public class GetByIdResponse: Response
     {
