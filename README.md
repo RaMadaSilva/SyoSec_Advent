@@ -1,39 +1,40 @@
-# SyoSec_Advent
+# SyosecAdvent
 
+## Introdução
 28/08/2023
-O SyoSec é um sistema de Organização da secretaria para as Igrejas Adventistas do sétimo Dia, Nomeadamente a Mabor;
-Este sistema visa Organizar todas recomendações Recebidas e Enviadas, bem como das actas elaboradas ao longo do ano Eclesiástico, e dos prazos de controle dos prazos das disciplinas por sencura.
-Módulos: 1. Recomendações 2. Actas 3. Disciplinas
+O SyoSec é um sistema de Organização da secretaria das Igrejas Adventistas do sétimo Dia, em particular para  a Mabor;
+Este sistema visa Organizar todas recomendações Recebidas e Enviadas,  actas elaboradas ao longo do ano Eclesiástico, e controle dos prazos das disciplinas por sencura.
 
-Módulo 1: Recomendações
+## Modulos
 
-Tipos de Cartas de Recomendações
+1. Recomendações
+2.  Actas
+3.  Disciplinas
 
-1. Recomendações Solicitadas:
-   - Registrar solicitação e devolução.
-   - Detalhes a serem registrados na solicitação:
+## Funcionalidades
+### Módulo 1: Recomendações
+
+### Registar a Recomendação
+
+O registo da Recommendação deve ser realizado por um utilizador com perfil de Secretario ou vice Secretario
+   - Detalhes a serem registrados: 
      - Nome do membro
      - Telefone
      - Morada do Membro
-     - Igreja a ser visitada
+     - Nome da Igreja 
      - Morada da igreja
-     - Data da solicitação
+     - Tipo de Recomendação (solicitado ou Recebido) 
      - Observação (opcional)
+
+### Devolução da Recomendação (TODO!)
+
+  - Registrar solicitação e devolução.
    - Para devolução, registrar:
      - Data do regresso
      - Anexar a carta devolvida
    - O membro pode manifestar o desejo de transferência.
    - Gerar PDF da carta de recomendação no momento da solicitação.
-2. Recomendações Recebidas:
-   - Detalhes a serem registrados na recepção:
-     - Nome do membro
-     - Telefone
-     - Morada atual do Membro
-     - Data da recomendação
-     - Data da recepção
-     - Igreja de origem
-     - Morada da igreja de origem
-     - Observação(Optional)
+
    - Recepção do membro e registado o regresso à procedência.
    - Para regresso, informar a data de regresso.
    - Para solicitação de transferência, informar:
@@ -53,7 +54,7 @@ Restrições e Funcionalidades Adicionais
 - Um membro pode ter apenas uma recomendação em andamento.
 - Manter histórico de ações realizadas em relação a cada carta de recomendação.
 
-Módulo 2: Actas
+### Módulo 2: Actas
 
 - Detalhes a serem registados
   - Numero da Acta
@@ -66,7 +67,7 @@ Módulo 2: Actas
 - Deve ser possível visualizar a acta sempre que necessário
 - deve ser possível fazer filtros separados ou filtro por intervalo de data.
 
-Módulo 3: Disciplinas
+### Módulo 3: Disciplinas
 
 - A disciplina é efetuado sobre um membro , mas o nosso sistema não irá tratar de algumas validações de membro, como um cadastro especifico de membro, pois já existe um sistema faz o controle de membro. O iremos fazer aqui é ter uma entidade disciplina que terá um Value Object Membro devido algumas validações necessárias
 - Detalhe da disciplina
@@ -81,28 +82,30 @@ Módulo 3: Disciplinas
 - O sistema deve apresentar sempre de forma dinâmica o numero de dias que faltam para que a Disciplina Termine.
 - Quando o numero de dias for Atinge em zero, começa a contar o numero de dias passado deste o termino da disciplina. e apresenta com uma coloração diferente.
 
-Tecnologias A ser Usada
+## Tecnologias
 
 - C#
 - Asp.Net core 7.0
 - Entity Framework core 7.0
-- Sql Server para produção e SqLite para desenvolvimento
-- Razor page
+- Sql Server
+- WebApi
 - CQRS
 - Clean Architecture
+- Flunt
 - SOLID
-- DRY
 - Mapster
-- Teste de Unidade (MStest)
+- Teste de Unidade (xUnit)
 - Git e GitHub.
 
-Diagrama de Classes
+## Diagrama de Classes
 
-- Modulo 1: Recommendações
+### Modulo 1: Recommendações
 -
-- Modulo 2: Actas
+### Modulo 2: Actas
 -
-- Modulo 3: Disciplinas
+### Modulo 3: Disciplinas
   Diagrama de caso de uso
 
-Idioma para o Desenvolvimento: Inglês
+## Idioma para Desenvolvimento
+
+* Inglês
