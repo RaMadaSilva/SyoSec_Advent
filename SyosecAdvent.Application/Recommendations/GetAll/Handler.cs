@@ -1,7 +1,7 @@
 ﻿using Mapster;
 using MediatR;
-using SyosecAdvent.Application.Common;
 using SyosecAdvent.Application.Common.DTO;
+using SyosecAdvent.Application.Extensions;
 using SyosecAdvent.Domain.Interfaces.Repositories;
 
 namespace SyosecAdvent.Application.Recommendations.GetAll
@@ -26,13 +26,9 @@ namespace SyosecAdvent.Application.Recommendations.GetAll
                 if (result is null)
                     return new GetAllResponse("busca sem resultado", 400);
 
-                var count = result.Count();
-
                 var resultDto = result.Adapt<IEnumerable<RecommendationDto>>();
 
-                var items = resultDto.Skip((request.CurrentPage - 1) * request.PageSize).Take(request.PageSize);
-
-                var listResult = new PaginatedListResponse<RecommendationDto>(items, count, request.CurrentPage, request.PageSize);
+                var listResult = resultDto.ToPaginationsList<RecommendationDto>(request.CurrentPage, request.PageSize);
 
                 return new GetAllResponse("Listada com sucesso", listResult);
 
@@ -40,7 +36,7 @@ namespace SyosecAdvent.Application.Recommendations.GetAll
             catch (Exception ex)
             {
                 return new GetAllResponse(ex.Message, 500);
-            }            
+            }
         }
     }
 }
