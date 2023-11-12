@@ -8,10 +8,10 @@
 
         public List<T> Result { get; set; } = new();
 
-        public PaginatedListResponse(IEnumerable<T> items, int count, int? currentPage= 1, int? pageSize=15)
+        public PaginatedListResponse(IEnumerable<T> items, int count, int? currentPage= 1, int pageSize=15)
         {
             Result.AddRange(items);
-            CurrentPage = currentPage; 
+            CurrentPage = currentPage;
             TotalPages = (int)Math.Ceiling(count/(double)pageSize);
             TotalItems = count;
         }
