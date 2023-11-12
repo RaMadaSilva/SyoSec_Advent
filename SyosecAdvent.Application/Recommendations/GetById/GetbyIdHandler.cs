@@ -5,16 +5,16 @@ using SyosecAdvent.Domain.Interfaces.Repositories;
 
 namespace SyosecAdvent.Application.Recommendations.GetById
 {
-    public class Handler : IRequestHandler<Request, GetByIdResponse>
+    public class GetbyIdHandler : IRequestHandler<GetByIdRequest, GetByIdResponse>
     {
         private readonly IUnitOfWorkAsync _Uow;
 
-        public Handler(IUnitOfWorkAsync uow)
+        public GetbyIdHandler(IUnitOfWorkAsync uow)
         {
             _Uow = uow;
         }
 
-        public async Task<GetByIdResponse> Handle(Request request, CancellationToken cancellationToken)
+        public async Task<GetByIdResponse> Handle(GetByIdRequest request, CancellationToken cancellationToken)
         {
             try
             {

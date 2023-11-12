@@ -2,7 +2,7 @@
 
 namespace SyosecAdvent.Application.Recommendations.GetById
 {
-    public sealed class Request : IRequest<GetByIdResponse>
+    public sealed class GetByIdRequest : IRequest<GetByIdResponse>
     {
         public long Id { get; set; }
     }
