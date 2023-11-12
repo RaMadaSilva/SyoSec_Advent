@@ -22,6 +22,6 @@ namespace SyosecAdvent.Application.Recommendations.GetById
             StatusCode = 200; 
         }
 
-        public RecommendationDto Data { get; set; }
+        public RecommendationDto? Data { get; set; }
     }
 }

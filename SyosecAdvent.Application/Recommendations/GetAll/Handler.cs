@@ -17,24 +17,30 @@ namespace SyosecAdvent.Application.Recommendations.GetAll
 
         public async Task<GetAllResponse> Handle(Request request, CancellationToken cancellationToken)
         {
-           var result =  await _Uow
+            try
+            {
+                var result = await _Uow
                                 .RecommendationReadRepository
                                 .GetAllAsync();
 
-            if (result is null)
-                return new GetAllResponse("busca sem resultado", 400);
+                if (result is null)
+                    return new GetAllResponse("busca sem resultado", 400);
 
-            var count = result.Count();
+                var count = result.Count();
 
-            var resultDto = result.Adapt<IEnumerable<RecommendationDto>>();
+                var resultDto = result.Adapt<IEnumerable<RecommendationDto>>();
 
-            var items = resultDto.Skip((request.CurrentPage - 1) * request.PageSize).Take(request.PageSize); 
+                var items = resultDto.Skip((request.CurrentPage - 1) * request.PageSize).Take(request.PageSize);
 
-            var listResult = new PaginatedListResponse<RecommendationDto>(items, count, request.CurrentPage, request.PageSize);
+                var listResult = new PaginatedListResponse<RecommendationDto>(items, count, request.CurrentPage, request.PageSize);
 
-            return new GetAllResponse("Listada com sucesso", listResult); 
+                return new GetAllResponse("Listada com sucesso", listResult);
 
-            
+            }
+            catch (Exception ex)
+            {
+                return new GetAllResponse(ex.Message, 500);
+            }            
         }
     }
 }
