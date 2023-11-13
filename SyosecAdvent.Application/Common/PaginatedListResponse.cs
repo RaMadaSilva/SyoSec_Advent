@@ -8,7 +8,7 @@
 
         public List<T> Result { get; set; } = new();
 
-        public PaginatedListResponse(IEnumerable<T> items, int count, int? currentPage= 1, int pageSize=15)
+        public PaginatedListResponse(IEnumerable<T> items, int count, int currentPage, int pageSize)
         {
             Result.AddRange(items);
             CurrentPage = currentPage;
