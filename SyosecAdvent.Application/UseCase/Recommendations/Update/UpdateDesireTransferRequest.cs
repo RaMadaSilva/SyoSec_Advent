@@ -1,6 +1,9 @@
-﻿namespace SyosecAdvent.Application.UseCase.Recommendations.Update
+﻿using MediatR;
+using SyosecAdvent.Application.Common;
+
+namespace SyosecAdvent.Application.UseCase.Recommendations.Update
 {
-    public class UpdateDesireTransferRequest
+    public class UpdateDesireTransferRequest : IRequest<DataRecommendationResponse>
     {
         public bool DesireTransfer { get; set; }
     }
