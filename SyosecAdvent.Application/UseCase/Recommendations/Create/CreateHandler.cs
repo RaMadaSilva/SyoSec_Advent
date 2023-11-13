@@ -19,7 +19,7 @@ namespace SyosecAdvent.Application.UseCase.Recommendations.Create
             Address addressMember;
             Address addressChurch;
             Church church;
-            Recommendation recommendation = null;
+            Recommendation? recommendation = null;
 
             try
             {
@@ -87,7 +87,6 @@ namespace SyosecAdvent.Application.UseCase.Recommendations.Create
                     await _uow.ChurchWriteRepository.AddAsync(church);
                     await _uow.MemberWriteRepository.AddAsync(member);
                     await _uow.RecommendationWriteRepository.AddAsync(recommendation);
-
                 }
 
                 await _uow.CommitAsync(cancellationToken);

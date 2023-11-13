@@ -2,5 +2,6 @@
 {
     public class UpdateDesireTransferRequest
     {
+        public bool DesireTransfer { get; set; }
     }
 }

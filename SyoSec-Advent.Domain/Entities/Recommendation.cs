@@ -4,7 +4,7 @@ namespace SyosecAdvent.Domain.Entities
 {
     public sealed class Recommendation : Entity
     {
-        private const double PERIODVALIDITY = 120;
+        private const int PERIODVALIDITY = 120;
         private Recommendation()
         {
 
@@ -21,6 +21,7 @@ namespace SyosecAdvent.Domain.Entities
             DesireTrasfer = false;
             RecommendationState = ERecommendationState.Valido;
             RecommendationType = recommendationType;
+            ExpireDate = DateRegister.AddDays(PERIODVALIDITY); 
         }
 
         public Member Member { get; private set; }
@@ -28,22 +29,19 @@ namespace SyosecAdvent.Domain.Entities
         public string Observation { get; private set; }
         public DateTime? DateReturn { get; private set; }
         public DateTime DateRegister { get; private set; }
+        public DateTime ExpireDate { get; private set; }
         public string? UrlRecommendation { get; private set; }
         public bool DesireTrasfer { get; private set; }
         public ERecommendationState RecommendationState { get; private set; }
         public ERecommendationType RecommendationType { get; private set; }
+        public int ExpireIn { get => (int)Math.Ceiling(ExpireDate.Subtract(DateTime.UtcNow).TotalDays); }
 
-        public bool UpdateStateRecommendationToInvalide()
+        public void UpdateStateRecommendationToInvalide()
         {
-            var DayPast = DateTime.UtcNow.Subtract(DateRegister).TotalDays;
+   
 
-            if (DayPast >= PERIODVALIDITY
-                && RecommendationState == ERecommendationState.Valido)
-            {
-                RecommendationState = ERecommendationState.Invalido;
-                return true;
-            }
-            return false;
+            if (ExpireIn < 0 && RecommendationState == ERecommendationState.Valido)
+                    RecommendationState = ERecommendationState.Invalido;
         }
 
         public bool UpdateStatRecommendationToDevolvido(DateTime date)
