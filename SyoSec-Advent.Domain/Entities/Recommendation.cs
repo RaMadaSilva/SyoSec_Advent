@@ -38,8 +38,7 @@ namespace SyosecAdvent.Domain.Entities
 
         public void UpdateStateRecommendationToInvalide()
         {
-   
-
+  
             if (ExpireIn < 0 && RecommendationState == ERecommendationState.Valido)
                     RecommendationState = ERecommendationState.Invalido;
         }
@@ -54,16 +53,16 @@ namespace SyosecAdvent.Domain.Entities
             return true;
         }
 
-        public bool UpdateStateRecommendationToTransferencia()
+        public bool UpdateStateRecommendationToTransferencia(bool desire)
         {
-            //Verificar o estado da propriedade se está como falsa
-            if(DesireTrasfer)
-                return false;
-            //Caso seja falsa actualizamos e alteramos o estado
-            DesireTrasfer = true; 
-            RecommendationState = ERecommendationState.Transferencia;
-            return true;
-        }
 
+            if (!DesireTrasfer && desire)
+            {
+                DesireTrasfer = desire;
+                RecommendationState = ERecommendationState.Transferencia;
+                return true;
+            }
+            return false;
+        }
     }
 }
