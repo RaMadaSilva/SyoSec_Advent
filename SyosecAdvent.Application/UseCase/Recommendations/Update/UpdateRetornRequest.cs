@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using SyosecAdvent.Application.Common;
 
 namespace SyosecAdvent.Application.UseCase.Recommendations.Update
 {
-    internal class UpdateRetornRequest
+    public  class UpdateRetornRequest : IRequest<DataRecommendationResponse>
     {
+        public string? UrlRecommendations { get; set; }
     }
 }
