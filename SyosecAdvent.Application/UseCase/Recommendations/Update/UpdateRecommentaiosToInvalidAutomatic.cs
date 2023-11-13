@@ -5,6 +5,7 @@ namespace SyosecAdvent.Application.UseCase.Recommendations.Update
 {
     public class UpdateRecommentaiosToInvalidAutomatic : IHostedService, IDisposable
     {
+        //TODO
         private readonly Recommendation _recommendation; 
         private Timer _timer;
 
