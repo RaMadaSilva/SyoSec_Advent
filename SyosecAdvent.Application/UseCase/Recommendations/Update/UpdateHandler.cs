@@ -66,6 +66,48 @@ public class UpdateHandler : IRequestHandler<UpdateDesireTransferRequest, Update
 
     public async Task<UpdateResponse> Handle(UpdateRetornRequest request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var notif = ValidationUpdateRetornRequest.Ensure(request);
+            if (!notif.IsValid)
+            {
+                return new UpdateResponse("request invalido", 400, notif.Notifications);
+            }
+
+        }
+        catch (Exception ex)
+        {
+            return new UpdateResponse(ex.Message, 500);
+        }
+
+        Recommendation recommendationBd;
+        try
+        {
+            recommendationBd = await _Uow.RecommendationReadRepository.GetByIdAsync(request.Id);
+
+            if (recommendationBd is null)
+                return new UpdateResponse("recomendação não foi encontrada!", 400);
+        }
+        catch (Exception ex)
+        {
+            return new UpdateResponse(ex.Message, 500);
+        }
+
+        try
+        {
+           recommendationBd.UpdateStatRecommendationToDevolvido(DateTime.UtcNow);
+            
+            await _Uow.RecommendationWriteRepository.UpdateAsync(recommendationBd);
+            var data = new DataRecommendationResponse(recommendationBd.Id,
+                            recommendationBd.Member.NameMember.ToString(),
+                            recommendationBd.Church.NameChurch,
+                            Enum.GetName(recommendationBd.RecommendationType));
+
+            return new UpdateResponse("Actualização bem sucedida", data);
+        }
+        catch (Exception ex)
+        {
+            return new UpdateResponse(ex.Message, 500);
+        }
     }
 }
