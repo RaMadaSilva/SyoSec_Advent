@@ -20,13 +20,13 @@ namespace SyosecAdvent.Infrastructure.Data.Map
 
             builder.OwnsOne(x => x.NameMember)
                    .Property(x => x.FirstName)
-                   .HasColumnName("Name")
+                   .HasColumnName("FirstName")
                    .HasColumnType("NVARCHAR")
                    .HasMaxLength(100);             
             
             builder.OwnsOne(x => x.NameMember)
                    .Property(x => x.LastName)
-                   .HasColumnName("Sobrenome")
+                   .HasColumnName("LastName")
                    .HasColumnType("NVARCHAR")
                    .HasMaxLength(100);
 

@@ -27,9 +27,9 @@ namespace SyosecAdvent.Domain.Entities
         public Member Member { get; private set; }
         public Church Church { get; private set; }
         public string Observation { get; private set; }
-        public DateTime? DateReturn { get; private set; }
         public DateTime DateRegister { get; private set; }
         public DateTime ExpireDate { get; private set; }
+        public DateTime? DateReturn { get; private set; }
         public string? UrlRecommendation { get; private set; }
         public bool DesireTrasfer { get; private set; }
         public ERecommendationState RecommendationState { get; private set; }

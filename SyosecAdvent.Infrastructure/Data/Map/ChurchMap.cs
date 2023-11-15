@@ -4,7 +4,7 @@ using SyosecAdvent.Domain.Entities;
 
 namespace SyosecAdvent.Infrastructure.Data.Map
 {
-    public class ChurchMap : IEntityTypeConfiguration<Church>
+public class ChurchMap : IEntityTypeConfiguration<Church>
     {
         public void Configure(EntityTypeBuilder<Church> builder)
         {
@@ -26,21 +26,21 @@ namespace SyosecAdvent.Infrastructure.Data.Map
             builder.OwnsOne(x=>x.AddressChurch)
                     .Property(x=>x.Street)
                     .IsRequired()
-                    .HasColumnName("Rua")
+                    .HasColumnName("Street")
                     .HasColumnType("NVARCHAR")
                     .HasMaxLength(200);            
             
             builder.OwnsOne(x=>x.AddressChurch)
                     .Property(x=>x.City)
                     .IsRequired()
-                    .HasColumnName("Cidade")
+                    .HasColumnName("City")
                     .HasColumnType("NVARCHAR")
                     .HasMaxLength(200);            
             
             builder.OwnsOne(x=>x.AddressChurch)
                     .Property(x=>x.Province)
                     .IsRequired()
-                    .HasColumnName("Provincia")
+                    .HasColumnName("Province")
                     .HasColumnType("NVARCHAR")
                     .HasMaxLength(200);
 
