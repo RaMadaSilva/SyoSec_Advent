@@ -44,7 +44,7 @@ public class ChurchMap : IEntityTypeConfiguration<Church>
                     .HasColumnType("NVARCHAR")
                     .HasMaxLength(200);
 
-            //TODO: Relacionamento
+            //TODO: Relacionamento com a recomendações uma igreja tem muitas recomendações
 
         }
     }

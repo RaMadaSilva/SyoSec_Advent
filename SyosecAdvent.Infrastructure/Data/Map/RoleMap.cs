@@ -24,7 +24,7 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(50); 
 
-            //TODO: Relacionamento
+            //TODO: Relacionamento com user de muitos para muitos
         }
     }
 }

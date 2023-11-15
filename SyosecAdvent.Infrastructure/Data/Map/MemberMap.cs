@@ -53,7 +53,8 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                    .HasColumnType("NVARCHAR")
                    .HasMaxLength(100); 
 
-            //TODO: Relacionamento
+            //TODO: Relacionamento com recomendações, um memmbro pode ter muitas recomendações
+            //Uma recomendação só pode pertencer a um membro. 
 
         }
     }

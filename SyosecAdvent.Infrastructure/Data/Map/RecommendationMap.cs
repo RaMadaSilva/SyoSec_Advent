@@ -60,7 +60,8 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                 .HasColumnName("RecommendationType")
                 .HasColumnType("INT");
 
-            //TODO: relacionamento
+            //TODO: relacionamento com Igreja 
+            //TODO: relaciomanto com Membro
         }
     }
 }
