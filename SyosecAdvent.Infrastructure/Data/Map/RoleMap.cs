@@ -22,9 +22,19 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                 .IsRequired()
                 .HasColumnName("RoleName")
                 .HasColumnType("NVARCHAR")
-                .HasMaxLength(50); 
+                .HasMaxLength(50);
 
-            //TODO: Relacionamento com user de muitos para muitos
+            builder.HasMany(x => x.Users)
+                .WithMany(x => x.Roles)
+                .UsingEntity<Dictionary<string, object>>("UserRole", 
+                user => user.HasOne<User>()
+                .WithMany()
+                .HasForeignKey("UserId")
+                .OnDelete(DeleteBehavior.Cascade),
+                role =>role.HasOne<Role>()
+                .WithMany()
+                .HasForeignKey("RoleId")
+                .OnDelete(DeleteBehavior.Cascade)); 
         }
     }
 }
