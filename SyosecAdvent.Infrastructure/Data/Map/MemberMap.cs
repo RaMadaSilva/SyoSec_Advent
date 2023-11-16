@@ -53,9 +53,10 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                    .HasColumnType("NVARCHAR")
                    .HasMaxLength(100); 
 
-            //TODO: Relacionamento com recomendações, um memmbro pode ter muitas recomendações
-            //Uma recomendação só pode pertencer a um membro. 
-
+            builder.HasOne(x=>x.Church)
+                   .WithMany(x=>x.Members)
+                   .HasForeignKey("ChurcId")
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

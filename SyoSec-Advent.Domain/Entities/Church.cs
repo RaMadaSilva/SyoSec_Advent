@@ -15,6 +15,7 @@ public sealed class Church : Entity, IEquatable<Church>
 
     public string NameChurch { get; private set; }
     public Address AddressChurch { get; private set; }
+    public IEnumerable<Member> Members { get; private set; } = Enumerable.Empty<Member>(); 
     public IReadOnlyCollection<Recommendation> Recommendations { get =>_recommendations;}
 
     public void AddRecommendation(Recommendation recommendation) =>

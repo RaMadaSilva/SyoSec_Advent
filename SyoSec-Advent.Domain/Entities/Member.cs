@@ -16,6 +16,7 @@ namespace SyosecAdvent.Domain.Entities
         public Name NameMember { get; private set; }
         public string Phone { get; private set; }
         public Address AddressMember { get; private set; }
+        public Church Church { get; private set; }
 
         public IReadOnlyCollection<Recommendation> Recommendations { get => _recommendations; }
 

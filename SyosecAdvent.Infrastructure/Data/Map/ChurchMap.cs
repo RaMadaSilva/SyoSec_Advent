@@ -43,8 +43,6 @@ public class ChurchMap : IEntityTypeConfiguration<Church>
                     .HasColumnName("Province")
                     .HasColumnType("NVARCHAR")
                     .HasMaxLength(200);
-
-            //TODO: Relacionamento com a recomendações uma igreja tem muitas recomendações
         }
     }
 }
