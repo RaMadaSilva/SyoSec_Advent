@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SyoSec-Advent.Domain\SyosecAdvent.Domain.csproj" />
   </ItemGroup>
 

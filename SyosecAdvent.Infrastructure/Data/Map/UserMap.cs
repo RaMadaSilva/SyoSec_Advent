@@ -43,9 +43,6 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                 .HasColumnName("PasswordHash")
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(100);
-
-            //TODO: Relacionamento com o Role de muitos para muitos
-
         }
     }
 }
