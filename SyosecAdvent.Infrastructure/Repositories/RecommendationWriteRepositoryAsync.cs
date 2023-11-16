@@ -4,28 +4,12 @@ using SyosecAdvent.Infrastructure.Data;
 
 namespace SyosecAdvent.Infrastructure.Repositories
 {
-    public class RecommendationWriteRepositoryAsync : IRecommendationWriteRepositoryAsync
+    public class RecommendationWriteRepositoryAsync : BaseWriteRepositoryAsync<Recommendation>, 
+        IRecommendationWriteRepositoryAsync
     {
-        private readonly SyosecAdventDbContext _context;
-
         public RecommendationWriteRepositoryAsync(SyosecAdventDbContext context)
+            : base(context)
         {
-            _context = context;
-        }
-
-        public Task AddAsync(Recommendation entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteAsync(Recommendation entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(Recommendation entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }

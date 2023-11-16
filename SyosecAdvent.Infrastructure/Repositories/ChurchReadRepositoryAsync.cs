@@ -4,27 +4,19 @@ using SyosecAdvent.Infrastructure.Data;
 
 namespace SyosecAdvent.Infrastructure.Repositories
 {
-    public class ChurchReadRepositoryAsync : IChurchReadRepositoryAsync
+    public class ChurchReadRepositoryAsync :BaseReadRepositoryAsync<Church>, IChurchReadRepositoryAsync
     {
         private readonly SyosecAdventDbContext _context;
 
-        public ChurchReadRepositoryAsync(SyosecAdventDbContext context)
+        public ChurchReadRepositoryAsync(SyosecAdventDbContext context) 
+            : base(context)
         {
-            _context = context;
+           //_context = context;
         }
 
-        public Task<IEnumerable<Church>> GetAllAsync()
+        public async Task<Church> GetChurchByNameAsync(string churcName)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<Church> GetByIdAsync(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Church> GetChurchByNameAsync(string churcName)
-        {
+            
             throw new NotImplementedException();
         }
     }

@@ -4,23 +4,12 @@ using SyosecAdvent.Infrastructure.Data;
 
 namespace SyosecAdvent.Infrastructure.Repositories
 {
-    public class RecommendationReadRepositoryAsync : IRecommendationReadRepositoryAsync
+    public class RecommendationReadRepositoryAsync : BaseReadRepositoryAsync<Recommendation>,
+        IRecommendationReadRepositoryAsync
     {
-        private readonly SyosecAdventDbContext _dbContext;
-
-        public RecommendationReadRepositoryAsync(SyosecAdventDbContext dbContext)
+        public RecommendationReadRepositoryAsync(SyosecAdventDbContext context) 
+            : base(context)
         {
-            _dbContext = dbContext;
-        }
-
-        public Task<IEnumerable<Recommendation>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Recommendation> GetByIdAsync(long id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

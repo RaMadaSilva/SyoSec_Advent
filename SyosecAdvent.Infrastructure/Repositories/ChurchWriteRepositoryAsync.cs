@@ -4,28 +4,12 @@ using SyosecAdvent.Infrastructure.Data;
 
 namespace SyosecAdvent.Infrastructure.Repositories
 {
-    public class ChurchWriteRepositoryAsync : IChurchWriteRepositoryAsync
+    public class ChurchWriteRepositoryAsync : BaseWriteRepositoryAsync<Church>, 
+        IChurchWriteRepositoryAsync
     {
-        private readonly SyosecAdventDbContext  _context;
-
-        public ChurchWriteRepositoryAsync(SyosecAdventDbContext context)
+        public ChurchWriteRepositoryAsync(SyosecAdventDbContext context) 
+            : base(context)
         {
-            _context = context; 
-        }
-
-        public Task AddAsync(Church entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteAsync(Church entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(Church entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }
