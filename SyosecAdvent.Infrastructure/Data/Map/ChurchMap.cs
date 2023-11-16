@@ -46,6 +46,11 @@ public class ChurchMap : IEntityTypeConfiguration<Church>
 
             //TODO: Relacionamento com a recomendações uma igreja tem muitas recomendações
 
+            builder.HasMany(x => x.Recommendations)
+                .WithOne(x => x.Church)
+                .HasPrincipalKey("RecommendationId")
+                .OnDelete(DeleteBehavior.Cascade); 
+
         }
     }
 }
