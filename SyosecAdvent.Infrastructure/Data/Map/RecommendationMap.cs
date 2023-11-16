@@ -59,9 +59,16 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                 .IsRequired()
                 .HasColumnName("RecommendationType")
                 .HasColumnType("INT");
+          
+            builder.HasOne(x => x.Church)
+                .WithMany(x => x.Recommendations)
+                .HasForeignKey("ChurchId")
+                .OnDelete(DeleteBehavior.Cascade);
 
-            //TODO: relacionamento com Igreja 
-            //TODO: relaciomanto com Membro
+            builder.HasOne(x => x.Member)
+                .WithMany(x => x.Recommendations)
+                .HasForeignKey("MemberId")
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
