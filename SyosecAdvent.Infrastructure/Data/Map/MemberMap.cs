@@ -52,11 +52,6 @@ namespace SyosecAdvent.Infrastructure.Data.Map
                    .HasColumnName("Province")
                    .HasColumnType("NVARCHAR")
                    .HasMaxLength(100); 
-
-            builder.HasOne(x=>x.Church)
-                   .WithMany(x=>x.Members)
-                   .HasForeignKey("ChurcId")
-                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
